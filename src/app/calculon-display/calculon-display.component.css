@@ -1,0 +1,44 @@
+.display {
+    width: 100%;
+    background-color: #1a1d1e;
+    padding: 2% 6%;
+    color: #ffe131;
+    text-align: center;
+    font-size: 65px;
+}
+
+.display h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 6% 0;
+}
+
+.display .week-total {
+    color: #828d92;
+}
+
+.display .week-total {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.display .week-total p {
+    width: 50%;
+}
+
+.display .week-total p:first-of-type {
+    text-align: left;
+}
+
+.display .week-total p:last-of-type {
+  text-align: right;
+}
+
+.display .numHolder {
+    max-width: 100%;
+    display: block;
+    overflow: scroll;
+}

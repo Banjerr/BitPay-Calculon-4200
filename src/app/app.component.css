@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculon {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}

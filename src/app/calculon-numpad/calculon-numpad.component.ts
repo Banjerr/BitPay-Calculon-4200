@@ -9,9 +9,16 @@ export class CalculonNumpadComponent implements OnInit {
   @Input() current_num: string;
   @Output() onValueChanged: EventEmitter<any> = new EventEmitter<any>();
   public num_buttons: Array<{value: any, order: number, function: any}>;
+  public is_decimal = false;
 
   create_current_num = (button_value) => {
+    console.log(this.is_decimal);
+    if (this.is_decimal && button_value === '.') return;
+
+    this.is_decimal = this.current_num.toString().includes('.');
+    
     let new_val = this.current_num != '0' ? this.current_num.toString() + button_value : button_value;
+    
     this.onValueChanged.emit(new_val);
   }
 

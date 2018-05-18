@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor='let button of num_buttons' (click)="button.function(button.value)">
+    {{button.value}}
+  </li>
+</ul>

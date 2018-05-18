@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'BitPay Calculon 4200';
+  current_num = '0';
+
+  public updateDisplay = (e) => {
+    if (e == 0) return this.current_num = '0';
+    
+    this.current_num = e;
+  }
 }

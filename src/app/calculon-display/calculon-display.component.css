@@ -39,6 +39,7 @@
 
 .display .numHolder {
     max-width: 100%;
-    display: block;
+    display: flex;
     overflow: scroll;
+    flex-direction: row-reverse;
 }

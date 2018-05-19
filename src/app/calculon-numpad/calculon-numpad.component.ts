@@ -12,10 +12,12 @@ export class CalculonNumpadComponent implements OnInit {
   public is_decimal = false;
 
   create_current_num = (button_value) => {
+    console.log(this.current_num.toString().slice(-1) == '.');
+    console.log(button_value);
     console.log(this.is_decimal);
-    if (this.is_decimal && button_value === '.') return;
+    if ((this.is_decimal && button_value == '.') || (this.current_num.toString().slice(-1) == '.' && button_value == '.')) return true;
 
-    this.is_decimal = this.current_num.toString().includes('.');
+    this.is_decimal = button_value === '.' || this.current_num.toString().includes('.');
     
     let new_val = this.current_num != '0' ? this.current_num.toString() + button_value : button_value;
     
